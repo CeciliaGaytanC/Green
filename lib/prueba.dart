@@ -1,31 +1,36 @@
+//import 'package:cook/BotBar';
+//import 'package:cook/BottomBar.%C3%A7';
 import 'package:flutter/material.dart';
 import 'package:greenapp/login.dart';
-import 'dart:html';
+
+
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+    static const String _title = '';
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-       
-        primarySwatch: Colors.blue,
+      debugShowCheckedModeBanner: false,
+      title: _title,
+     home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 163, 235, 217),
+       // appBar: AppBar(title: const Text(_title)),
+        body: const MyHomePage(),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
-  final String title;
+  //final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -165,3 +170,4 @@ class _MyHomePageState extends State<MyHomePage> {
         ));
   }
 }
+
